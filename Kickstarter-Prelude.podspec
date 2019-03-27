@@ -14,10 +14,10 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/kickstarter/Kickstarter-Prelude.git", :branch => "master" }
   s.author       = ""
 
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
   s.ios.deployment_target  = '11.2'
 
-  s.dependency 'Runes',  '~> 4.1.0'
+  s.dependency 'Runes',  '~> 4.2.1'
   s.module_name = 'Prelude'
   s.source_files  = "Prelude/**/*.swift"
   s.exclude_files = "Prelude/**/*Tests.swift", "Prelude/**/*Test.swift"
