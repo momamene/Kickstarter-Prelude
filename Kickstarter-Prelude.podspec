@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/kickstarter/Kickstarter-Prelude.git", :branch => "master" }
   s.author       = ""
 
-  s.swift_version = '5.0'
+  s.swift_version = '4.2'
   s.ios.deployment_target  = '11.2'
 
   s.dependency 'Runes',  '~> 4.2.1'
