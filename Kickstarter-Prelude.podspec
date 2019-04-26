@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Kickstarter-Prelude"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "A collection of useful Swift tools that are used in the Kickstarter apps."
 
   s.description  = <<-DESC
@@ -16,6 +16,9 @@ Pod::Spec.new do |s|
 
   s.swift_version = '4.2'
   s.ios.deployment_target  = '11.2'
+  s.osx.deployment_target = '10.14'
+  s.watchos.deployment_target = '5.2'
+  s.tvos.deployment_target = '12.1'
 
   s.dependency 'Runes',  '~> 4.2.1'
   s.module_name = 'Prelude'
