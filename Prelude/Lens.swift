@@ -182,6 +182,25 @@ public func .~ <Whole, Part> (keyPath: WritableKeyPath<Whole, Part>, part: Part)
   return lens(keyPath) .~ part
 }
 
+public func .~ <Whole, Part> (keyPath: WritableKeyPath<Whole, Part?>, part: Part?) -> ((Whole) -> Whole) {
+  guard let part = part else {
+    return { whole in
+      var copy = whole
+      copy[keyPath: keyPath] = nil
+      return copy
+    }
+  }
+
+  return lens(keyPath) .~ part
+}
+
+// haven't been able to test this one because I can't get the project to build right now 🤷‍♂
+public func %~ <Whole, Part> (keyPath: WritableKeyPath<Whole, Part?>, f: @escaping (Part?) -> Part?)
+  -> ((Whole) -> Whole) {
+    return lens(keyPath) %~ f
+}
+
+
 /**
  Infix operator of the `over` function.
 
