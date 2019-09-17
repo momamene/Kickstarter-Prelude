@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Kickstarter-Prelude"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "A collection of useful Swift tools that are used in the Kickstarter apps."
 
   s.description  = <<-DESC
